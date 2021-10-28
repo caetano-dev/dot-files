@@ -1,2 +1,3 @@
-# Vim-config
-My Vim config
+# My Vim plugins.
+
+A backup of the plugins I use
