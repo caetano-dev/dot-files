@@ -20,16 +20,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'github/copilot.vim' 
     " Javascript autocomplete
     Plug 'pangloss/vim-javascript'
+
     " Fuzzy finder
-    Plug 'junegunn/fzf'
-    " deoplete
+    "Plug 'junegunn/fzf'
     
+    " Telescope  
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'sharkdp/fd'
+    Plug 'BurntSushi/ripgrep'
+
     "Gruvbox colors
     Plug 'morhetz/gruvbox'
     
-    "nord-vim
-    Plug  'arcticicestudio/nord-vim'
-
     "Prettier
     "Plug 'prettier/vim-prettier'
     
