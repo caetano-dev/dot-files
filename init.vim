@@ -1,10 +1,9 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
 "gruvbox 
-"let g:gruvbox_contrast_dark = 'hard'
-"autocmd vimenter * ++nested colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+autocmd vimenter * ++nested colorscheme gruvbox
 
-"nord
-autocmd vimenter * ++nested colorscheme nord
+let mapleader = " " "set keyleader to spacebar
 
 "configs for set
 
@@ -15,3 +14,8 @@ set number
 
 " JavaScript autocompletion
 set omnifunc=javascriptcomplete#CompleteJS
+
+"Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
