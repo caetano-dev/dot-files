@@ -23,19 +23,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Fuzzy finder
     Plug 'junegunn/fzf'
     " deoplete
-    if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+    
     "Gruvbox colors
     Plug 'morhetz/gruvbox'
     "Prettier
     "Plug 'prettier/vim-prettier'
     "neoformat
     Plug 'sbdchd/neoformat'
-
+    "coc
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
