@@ -26,8 +26,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     
     "Gruvbox colors
     Plug 'morhetz/gruvbox'
+    
+    "nord-vim
+    Plug  'arcticicestudio/nord-vim'
+
     "Prettier
     "Plug 'prettier/vim-prettier'
+    
     "neoformat
     Plug 'sbdchd/neoformat'
     "coc
