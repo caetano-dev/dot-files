@@ -4,3 +4,4 @@ Just add use "plugin_author/plugin_name" to lua/plugins/init.lua and use :Packer
 
 "github/copilot.vim"
 "fatih/vim-go" and run :GoUpdateBinaries
+"neoclide/coc.nvim" branch = "release" and run :CocInstall coc-json coc-tsserver coc-go
