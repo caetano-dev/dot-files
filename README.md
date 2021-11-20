@@ -2,4 +2,6 @@
 
 A backup of the configs, plugins and mappings I use.
 
-I'm currently using [NvChad](https://github.com/NvChad/NvChad).
+Here you can find the configs for:
+[NvChad](https://github.com/NvChad/NvChad).
+[i3-gaps](https://github.com/Airblader/i3)
