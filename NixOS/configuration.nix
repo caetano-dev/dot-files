@@ -48,31 +48,27 @@
   
   #services.xserver.enable = true;
 
-  # Enable the Plasma 5 Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   #services.xserver.desktopManager.xfce.enable = false;
 
-  #services.xserver.windowManager.i3.enable
-  #services.xserver.windowManager.i3.package = pkgs.i3-gaps;
+  services.mysql.package = pkgs.mariadb;
+  services.mysql.enable = true;
 
-services.mysql.package = pkgs.mariadb;
-services.mysql.enable = true;
+  services.xserver = {
+	  enable = true;
 
-services.xserver = {
-    enable = true;
+	  desktopManager = {
+		  xterm.enable = false;
+	  };
 
-    desktopManager = {
-      xterm.enable = false;
-    };
-   
 
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        dmenu #application launcher most people use
-        i3status # gives you the default i3 status bar
-        i3lock #default i3 screen locker
-        i3blocks #if you are planning on using i3blocks over i3status
+	  windowManager.i3 = {
+		  enable = true;
+		  extraPackages = with pkgs; [
+        dmenu 
+	i3status 
+        i3lock 
+        i3block
 	i3-gaps
         rofi
      ];
@@ -125,7 +121,6 @@ services.xserver = {
      mariadb
      go
      pywal
-     bash-completion
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
