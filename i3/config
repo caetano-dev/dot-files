@@ -181,8 +181,8 @@ mode "resize" {
 # i3 gaps
 for_window [class="^.*"] border pixel 1
 
-#gaps inner 10
-#gaps outer 10
+gaps inner 10
+gaps outer 10
 
 #i3 rounded border
 #border_radius 10
@@ -195,7 +195,6 @@ bar {
         status_command i3status
 }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-fill $HOME/Pictures/gruvbox.png
 exec_always redshift -O 4500
 exec_always setxkbmap -model abnt2 -layout br -variant abnt2
 exec_always --no-startup-id xcompmgr -c & 
