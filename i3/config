@@ -151,7 +151,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m ' You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -179,13 +179,13 @@ mode "resize" {
 }
 
 # i3 gaps
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 gaps inner 10
 gaps outer 10
 
 #i3 rounded border
-#border_radius 10
+border_radius 10
 
 bindsym $mod+r mode "resize"
 
@@ -194,8 +194,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+exec_always picom --config $HOME/.config/picom/picom.conf --experimental-backends &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always redshift -O 4500
+exec_always --no-startup-id redshift -O 4500
 exec_always setxkbmap -model abnt2 -layout br -variant abnt2
 exec_always --no-startup-id xcompmgr -c & 
 exec_always --no-startup-id wal -R
