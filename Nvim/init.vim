@@ -35,7 +35,7 @@ filetype plugin indent on   " allow auto-indenting depending on file type
 
 syntax on                   " syntax highlighting
 syntax enable
-" autocmd vimenter * ++nested colorscheme gruvbox
+"autocmd vimenter * ++nested colorscheme gruvbox
 
 nnoremap <SPACE> <Nop>
 
@@ -44,7 +44,7 @@ nnoremap <leader>e <cmd>CHADopen<cr>
 
 " open Telescope
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fw <cmd>Telescope live_grep<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 
@@ -76,8 +76,11 @@ call plug#begin("~/.vim/plugged")
  " Plugin Section
  Plug 'fatih/vim-go'
  Plug 'morhetz/gruvbox'
+ Plug 'othree/html5.vim'
  Plug 'mkitt/tabline.vim'
  Plug 'github/copilot.vim'
+ Plug 'BurntSushi/ripgrep'
+ Plug 'alvan/vim-closetag'
  Plug 'jiangmiao/auto-pairs'
  Plug 'nvim-lua/plenary.nvim'
  Plug 'ryanoasis/vim-devicons'
