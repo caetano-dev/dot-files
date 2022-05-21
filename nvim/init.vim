@@ -29,9 +29,9 @@ filetype plugin on
 filetype plugin indent on   " allow auto-indenting depending on file type
 
 " color schemes
-"if (has("termguicolors"))
-"set termguicolors
-"endif
+if (has("termguicolors"))
+set termguicolors
+endif
 
 syntax on                   " syntax highlighting
 syntax enable
@@ -71,22 +71,31 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-
-call plug#begin("~/.vim/plugged")
+call plug#begin('~/.vim/plugged')
  " Plugin Section
+ Plug 'sharkdp/fd'
  Plug 'fatih/vim-go'
  Plug 'morhetz/gruvbox'
+ Plug 'mattn/emmet-vim'
  Plug 'othree/html5.vim'
  Plug 'mkitt/tabline.vim'
+ Plug 'zchee/deoplete-go'
  Plug 'github/copilot.vim'
+ Plug 'rust-lang/rust.vim'
  Plug 'BurntSushi/ripgrep'
  Plug 'alvan/vim-closetag'
+ Plug 'yggdroot/indentline'
  Plug 'jiangmiao/auto-pairs'
+ Plug 'sheerun/vim-polyglot'
+ Plug 'bling/vim-bufferline'
  Plug 'nvim-lua/plenary.nvim'
+ Plug 'neovim/nvim-lspconfig'
  Plug 'ryanoasis/vim-devicons'
  Plug 'vim-airline/vim-airline'
  Plug 'preservim/nerdcommenter'
+ Plug 'rust-analyzer/rust-analyzer'
  Plug 'nvim-telescope/telescope.nvim'
+ Plug 'enricobacis/vim-airline-clock'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
  Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
