@@ -1,5 +1,5 @@
 let mapleader=" "
-let g:tablineclosebutton=1
+let g:tablineclosebutton = 1
 let g:airline#extensions#tabline#enabled = 1
 
 set number                  " add line numbers
@@ -35,7 +35,7 @@ endif
 
 syntax on                   " syntax highlighting
 syntax enable
-"autocmd vimenter * ++nested colorscheme gruvbox
+autocmd vimenter * ++nested colorscheme gruvbox 
 
 nnoremap <SPACE> <Nop>
 
@@ -96,6 +96,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'rust-analyzer/rust-analyzer'
  Plug 'nvim-telescope/telescope.nvim'
  Plug 'enricobacis/vim-airline-clock'
+ Plug 'vim-airline/vim-airline-themes'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
  Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
