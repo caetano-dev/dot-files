@@ -3,6 +3,7 @@ let g:tablineclosebutton = 1
 let g:airline#extensions#tabline#enabled = 1
 
 set number                  " add line numbers
+set spell
 set mouse=v                 " middle-click paste with 
 set mouse=a                 " enable mouse click
 set hlsearch                " highlight search 
@@ -22,6 +23,8 @@ set nocompatible            " disable compatibility to old-time vi
 set shiftwidth=4            " width for autoindents
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
 set relativenumber          " relative line numbers
+set spelllang=en,pt,fr      " spell check
+set spellsuggest=best,9     " show nine spell candidates
 set wildmode=longest,list   " get bash-like tab completions
 set clipboard=unnamedplus   " using system clipboard
 
