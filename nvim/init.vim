@@ -3,7 +3,7 @@ let g:tablineclosebutton = 1
 let g:airline#extensions#tabline#enabled = 1
 
 set number                  " add line numbers
-set spell
+set spell                   " spell checking
 set mouse=v                 " middle-click paste with 
 set mouse=a                 " enable mouse click
 set hlsearch                " highlight search 
@@ -38,7 +38,7 @@ endif
 
 syntax on                   " syntax highlighting
 syntax enable
-autocmd vimenter * ++nested colorscheme gruvbox 
+autocmd vimenter * ++nested colorscheme spaceduck 
 
 nnoremap <SPACE> <Nop>
 
@@ -68,6 +68,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" remap lightspeed's s to z
+nmap <expr> z reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_s" : "s"
+nmap <expr> Z reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_S" : "S"
+
 " Vim jump to the last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -77,8 +81,7 @@ endif
 call plug#begin('~/.vim/plugged')
  " Plugin Section
  Plug 'sharkdp/fd'
- Plug 'fatih/vim-go'
- Plug 'morhetz/gruvbox'
+ Plug 'fatih/vim-go' " 
  Plug 'mattn/emmet-vim'
  Plug 'othree/html5.vim'
  Plug 'mkitt/tabline.vim'
@@ -96,11 +99,14 @@ call plug#begin('~/.vim/plugged')
  Plug 'ryanoasis/vim-devicons'
  Plug 'vim-airline/vim-airline'
  Plug 'preservim/nerdcommenter'
+ Plug 'ggandor/lightspeed.nvim'
+ Plug 'norcalli/nvim-colorizer.lua'
  Plug 'rust-analyzer/rust-analyzer'
  Plug 'nvim-telescope/telescope.nvim'
  Plug 'enricobacis/vim-airline-clock'
  Plug 'vim-airline/vim-airline-themes'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
  Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
