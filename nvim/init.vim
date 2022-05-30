@@ -81,18 +81,22 @@ endif
 call plug#begin('~/.vim/plugged')
  " Plugin Section
  Plug 'sharkdp/fd'
- Plug 'fatih/vim-go' " 
+ Plug 'fatih/vim-go'
  Plug 'mattn/emmet-vim'
+ Plug 'hrsh7th/nvim-cmp'
  Plug 'othree/html5.vim'
  Plug 'mkitt/tabline.vim'
  Plug 'zchee/deoplete-go'
+ Plug 'mhinz/vim-signify'
  Plug 'github/copilot.vim'
  Plug 'rust-lang/rust.vim'
  Plug 'BurntSushi/ripgrep'
  Plug 'alvan/vim-closetag'
+ Plug 'hrsh7th/cmp-buffer'
  Plug 'yggdroot/indentline'
  Plug 'jiangmiao/auto-pairs'
  Plug 'sheerun/vim-polyglot'
+ Plug 'hrsh7th/cmp-nvim-lsp'
  Plug 'bling/vim-bufferline'
  Plug 'nvim-lua/plenary.nvim'
  Plug 'neovim/nvim-lspconfig'
@@ -105,9 +109,18 @@ call plug#begin('~/.vim/plugged')
  Plug 'nvim-telescope/telescope.nvim'
  Plug 'enricobacis/vim-airline-clock'
  Plug 'vim-airline/vim-airline-themes'
+ Plug 'williamboman/nvim-lsp-installer'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
  Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
 call plug#end()
+
+lua << EOF
+vim.defer_fn(function()
+      vim.cmd[[
+      luafile /home/drull/.config/nvim/lua/lsp.lua
+      ]]
+      end, 70)
+EOF
