@@ -81,17 +81,13 @@ endif
 call plug#begin('~/.vim/plugged')
  " Plugin Section
  Plug 'sharkdp/fd'
- Plug 'fatih/vim-go', {'for' : 'go'}
- Plug 'mattn/emmet-vim', {'for' : 'html, css'}
  Plug 'hrsh7th/nvim-cmp'
- Plug 'othree/html5.vim', {'for' : 'html'}
  Plug 'mkitt/tabline.vim'
  Plug 'mhinz/vim-signify'
  Plug 'github/copilot.vim'
- Plug 'rust-lang/rust.vim', {'for' : 'rust'}
  Plug 'BurntSushi/ripgrep'
- Plug 'alvan/vim-closetag'
  Plug 'hrsh7th/cmp-buffer'
+ Plug 'alvan/vim-closetag'
  Plug 'yggdroot/indentline'
  Plug 'jiangmiao/auto-pairs'
  Plug 'sheerun/vim-polyglot'
@@ -100,16 +96,21 @@ call plug#begin('~/.vim/plugged')
  Plug 'nvim-lua/plenary.nvim'
  Plug 'neovim/nvim-lspconfig'
  Plug 'ryanoasis/vim-devicons'
+ Plug 'f-person/git-blame.nvim'
  Plug 'vim-airline/vim-airline'
  Plug 'preservim/nerdcommenter'
  Plug 'ggandor/lightspeed.nvim'
  Plug 'norcalli/nvim-colorizer.lua'
- Plug 'rust-analyzer/rust-analyzer', {'for' : 'rust'}
+ Plug 'fatih/vim-go', {'for' : 'go'}
  Plug 'nvim-telescope/telescope.nvim'
  Plug 'enricobacis/vim-airline-clock'
  Plug 'vim-airline/vim-airline-themes'
  Plug 'williamboman/nvim-lsp-installer'
+ Plug 'othree/html5.vim', {'for' : 'html'}
+ Plug 'rust-lang/rust.vim', {'for' : 'rust'}
+ Plug 'mattn/emmet-vim', {'for' : 'html, css'}
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'rust-analyzer/rust-analyzer', {'for' : 'rust'}
  Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
  Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
