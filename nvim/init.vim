@@ -81,15 +81,14 @@ endif
 call plug#begin('~/.vim/plugged')
  " Plugin Section
  Plug 'sharkdp/fd'
- Plug 'fatih/vim-go'
- Plug 'mattn/emmet-vim'
+ Plug 'fatih/vim-go', {'for' : 'go'}
+ Plug 'mattn/emmet-vim', {'for' : 'html, css'}
  Plug 'hrsh7th/nvim-cmp'
- Plug 'othree/html5.vim'
+ Plug 'othree/html5.vim', {'for' : 'html'}
  Plug 'mkitt/tabline.vim'
- Plug 'zchee/deoplete-go'
  Plug 'mhinz/vim-signify'
  Plug 'github/copilot.vim'
- Plug 'rust-lang/rust.vim'
+ Plug 'rust-lang/rust.vim', {'for' : 'rust'}
  Plug 'BurntSushi/ripgrep'
  Plug 'alvan/vim-closetag'
  Plug 'hrsh7th/cmp-buffer'
@@ -105,7 +104,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'preservim/nerdcommenter'
  Plug 'ggandor/lightspeed.nvim'
  Plug 'norcalli/nvim-colorizer.lua'
- Plug 'rust-analyzer/rust-analyzer'
+ Plug 'rust-analyzer/rust-analyzer', {'for' : 'rust'}
  Plug 'nvim-telescope/telescope.nvim'
  Plug 'enricobacis/vim-airline-clock'
  Plug 'vim-airline/vim-airline-themes'
