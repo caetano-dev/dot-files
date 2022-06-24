@@ -1,4 +1,6 @@
 let mapleader=" "
+"sneak vim
+let g:sneak#label = 1
 let g:tablineclosebutton = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -68,9 +70,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" remap lightspeed's s to z
-nmap <expr> z reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_s" : "s"
-nmap <expr> Z reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_S" : "S"
+
+"vim sneak
+nnoremap f <Plug>Sneak_s
+nnoremap F <Plug>Sneak_S
 
 " Vim jump to the last position when reopening a file
 if has("autocmd")
@@ -84,10 +87,10 @@ call plug#begin('~/.vim/plugged')
  Plug 'hrsh7th/nvim-cmp'
  Plug 'mkitt/tabline.vim'
  Plug 'mhinz/vim-signify'
- Plug 'github/copilot.vim'
  Plug 'BurntSushi/ripgrep'
  Plug 'hrsh7th/cmp-buffer'
  Plug 'alvan/vim-closetag'
+ Plug 'justinmk/vim-sneak'
  Plug 'yggdroot/indentline'
  Plug 'jiangmiao/auto-pairs'
  Plug 'sheerun/vim-polyglot'
@@ -99,7 +102,6 @@ call plug#begin('~/.vim/plugged')
  Plug 'f-person/git-blame.nvim'
  Plug 'vim-airline/vim-airline'
  Plug 'preservim/nerdcommenter'
- Plug 'ggandor/lightspeed.nvim'
  Plug 'norcalli/nvim-colorizer.lua'
  Plug 'fatih/vim-go', {'for' : 'go'}
  Plug 'nvim-telescope/telescope.nvim'
