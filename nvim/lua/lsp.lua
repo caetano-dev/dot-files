@@ -67,7 +67,7 @@ cmp.setup({
         },
     },
     mapping = {
-        ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }), -- disable tab in order to enable copilot
+        ["'"] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }), -- Remap tab to ' in order to be able to use autocomplete when typing commands.
         ['<C-j>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
         ['<C-k>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
         ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
