@@ -12,16 +12,15 @@ require'lspconfig'.tsserver.setup{}
 require'lspconfig'.sumneko_lua.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 require('nvim-lsp-installer').setup({
-    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+  automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
     ui = {
-        icons = {
-            server_installed = "✓",
-            server_pending = "➜",
-            server_uninstalled = "✗"
-        }
-    }
+      icons = {
+          server_installed = "✓",
+          server_pending = "➜",
+          server_uninstalled = "✗"
+      }
+  }
 })
-
 
 vim.o.completeopt = "menuone,noselect"
 
@@ -67,7 +66,7 @@ cmp.setup({
         },
     },
     mapping = {
-        ["'"] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }), -- Remap tab to ' in order to be able to use autocomplete when typing commands.
+        ["<TAB>"] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }), -- Remap tab to ' in order to be able to use autocomplete when typing commands.
         ['<C-j>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
         ['<C-k>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
         ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
@@ -79,7 +78,7 @@ cmp.setup({
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     },
     sources = cmp.config.sources(
-        {{ name = 'nvim_lsp' }, { name = 'buffer' }, { name = 'path' },
+        {{ name = 'nvim_lsp' }, {name = 'cmp_tabnine'}, { name = 'buffer' }, { name = 'path' },
     }),
     formatting = {
         format = function(entry, vim_item)
@@ -92,10 +91,10 @@ cmp.setup({
         vim_item.menu = ({
             buffer = " ",
             nvim_lsp = " ",
+            cmp_tabnine = " ",
             path = " ",
         })[entry.source.name]
         return vim_item
         end
     },
 })
-

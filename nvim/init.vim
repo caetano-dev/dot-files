@@ -111,8 +111,8 @@ call plug#begin('~/.vim/plugged')
  Plug 'othree/html5.vim', {'for' : 'html'}
  Plug 'rust-lang/rust.vim', {'for' : 'rust'}
  Plug 'mattn/emmet-vim', {'for' : 'html, css'}
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'rust-analyzer/rust-analyzer', {'for' : 'rust'}
+ Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
  Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
  Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
