@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec yakuake
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -105,6 +105,7 @@ bindsym $mod+a focus parent
 bindsym $mod+b exec firefox 
 bindsym $mod+t exec telegram-desktop
 bindsym $mod+q exec qbittorrent
+bindsym $mod+i exec ./standard-notes-3.131.0-linux-x86_64.AppImage 
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -197,8 +198,9 @@ bar {
 
 #exec_always picom --config $HOME/.config/picom/picom.conf --experimental-backends &
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh $HOME/Pictures/wallpaper.png --no-xinerama --bg-fill
+exec_always --no-startup-id feh $HOME/Pictures/wallpaper.jpg --bg-fill
+#exec_always --no-startup-id qbittorrent
 exec_always --no-startup-id redshift -O 4500
 exec_always setxkbmap -model abnt2 -layout br -variant abnt2
 exec_always --no-startup-id xcompmgr -c & 
-#exec_always --no-startup-id wal -R
+exec_always --no-startup-id wal -R
