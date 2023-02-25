@@ -25,7 +25,7 @@ set nocompatible            " disable compatibility to old-time vi
 set shiftwidth=4            " width for autoindents
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
 set relativenumber          " relative line numbers
-set spelllang=en,pt,fr      " spell check
+"set spelllang=en,pt,fr      " spell check
 set spellsuggest=best,9     " show nine spell candidates
 set wildmode=longest,list   " get bash-like tab completions
 set clipboard=unnamedplus   " using system clipboard
@@ -70,7 +70,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
 "vim sneak
 nnoremap f <Plug>Sneak_s
 nnoremap F <Plug>Sneak_S
@@ -111,6 +110,8 @@ call plug#begin('~/.vim/plugged')
  Plug 'othree/html5.vim', {'for' : 'html'}
  Plug 'rust-lang/rust.vim', {'for' : 'rust'}
  Plug 'mattn/emmet-vim', {'for' : 'html, css'}
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"CocInstall coc-css coc-browser coc-cmake coc-cssmodules coc-docker coc-eslint coc-git coc-fzf-preview coc-go coc-highlight coc-html coc-html-css-support coc-java coc-json coc-lua coc-markdownlint coc-prettier coc-rust-analyzer coc-spell-checker coc-tabnine coc-tailwindcss coc-tsserver
  Plug 'rust-analyzer/rust-analyzer', {'for' : 'rust'}
  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
  Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
@@ -119,10 +120,10 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-lua << EOF
-vim.defer_fn(function()
-      vim.cmd[[
-      luafile /home/drull/.config/nvim/lua/lsp.lua
-      ]]
-      end, 70)
-EOF
+"lua << EOF
+"vim.defer_fn(function()
+      "vim.cmd[[
+      "luafile /home/drull/.config/nvim/lua/lsp.lua
+      "]]
+      "end, 70)
+"EOF
