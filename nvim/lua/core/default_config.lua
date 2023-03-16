@@ -43,6 +43,7 @@ M.ui = {
 
   -- lazyload it when there are 1+ buffers
   tabufline = {
+    enabled = true,
     lazyload = true,
     overriden_modules = nil,
   },
@@ -68,13 +69,21 @@ M.ui = {
       { "  Recent Files", "Spc f o", "Telescope oldfiles" },
       { "  Find Word", "Spc f w", "Telescope live_grep" },
       { "  Bookmarks", "Spc b m", "Telescope marks" },
-      { "  Themes", "Spc t f", "Telescope themes" },
+      { "  Themes", "Spc t h", "Telescope themes" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
   },
 
   cheatsheet = {
     theme = "grid", -- simple/grid
+  },
+
+  lsp = {
+    -- show function signatures i.e args as you type
+    signature = {
+      disabled = false,
+      silent = true, -- silences 'no signature help available' message from appearing
+    },
   },
 }
 
